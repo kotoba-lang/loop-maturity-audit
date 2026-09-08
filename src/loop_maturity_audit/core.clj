@@ -2,7 +2,7 @@
 ;; JVM-only (java.time). Propose-only: audits and proposes, never regenerates.
 (ns loop-maturity-audit.core
   (:require [clojure.edn :as edn]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (def stale-after-days 30)
 

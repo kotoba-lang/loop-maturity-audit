@@ -1,6 +1,6 @@
 (ns loop-maturity-audit.core-test
   (:require [clojure.test :refer [deftest is testing]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.edn :as edn]
             [loop-maturity-audit.core :as audit]))
 
