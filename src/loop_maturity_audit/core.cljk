@@ -54,8 +54,8 @@
   [{:keys [status missing]}]
   (case status
     :fresh "no action — repo-maturity.edn is fresh"
-    :stale-by-age (str "propose: nbb scripts/repo-maturity.cljs  (full regeneration, ~214 GraphQL batches, run as a dedicated task)")
-    :stale-by-drift (str "propose: nbb scripts/repo-maturity.cljs  (" missing
+    :stale-by-age (str "propose: kbb --backend sci scripts/repo-maturity.cljk  (full regeneration, ~214 GraphQL batches, run as a dedicated task)")
+    :stale-by-drift (str "propose: kbb --backend sci scripts/repo-maturity.cljk  (" missing
                          " west projects missing from the maturity file — full regeneration covers them; "
                          "--paths-from can rescore a subset first)")
     :unmeasured "propose: fix the audit itself — maturity file unreadable, see audit reason"))

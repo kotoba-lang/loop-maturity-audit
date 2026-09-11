@@ -34,12 +34,12 @@ ADR-2809050100 の gap-1 として closed したが、**再発防止の構造が
 
 ```bash
 # superproject root から
-clojure -Sdeps '{:paths ["../loop-maturity-audit/src"]}' \
+kbb -Sdeps '{:paths ["../loop-maturity-audit/src"]}' \
   -M ../loop-maturity-audit/bin/audit.cljs
 ```
 
 出力: fresh / stale-by-age / stale-by-drift + 欠落 repo 数 + 提案コマンド。
-再生成は `nbb scripts/repo-maturity.cljs`（GraphQL 214 バッチ、単独タスク）—
+再生成は `kbb --backend sci scripts/repo-maturity.cljk`（GraphQL 214 バッチ、単独タスク）—
 **この loop は実行しない**、提案だけ。
 
 ## 非目標
